@@ -1,20 +1,32 @@
-import java.util.Set;
-
-import controller.Sets;
+import controller.ContactoController;
+// import controller.Sets; // Descomenta si luego necesitas probar los Sets
 
 public class App {
     public static void main(String[] args) {
-        Sets sets = new Sets();
-        runHashSet(sets);
-        runLinkedHashSet(sets);
-        runTreeSet(sets);
-        runTreeSetConComparador(sets);
-        runTreeSetConComparadorInvertido(sets);
-    }
 
+        ContactoController controller = new ContactoController();
+
+        controller.runTreeContactoSimple();
+        System.out.println();
+
+        controller.runTreeContactoCompleto();
+        System.out.println();
+
+        controller.runTreeContactoHash();
+    }
+        // Si quieres probar más adelante los métodos de Sets, descomenta:
+        // Sets sets = new Sets();
+        // runHashSet(sets);
+        // runLinkedHashSet(sets);
+        // runTreeSet(sets);
+        // runTreeSetConComparador(sets);
+        // runTreeSetConComparadorInvertido(sets);
+    }
+    
+
+    /*
     private static void runHashSet(Sets sets) {
         System.out.println("HashSet:");
-        sets.construirHashSet();
         for (String palabra : sets.construirHashSet()) {
             System.out.println(palabra);
         }
@@ -22,15 +34,13 @@ public class App {
 
     private static void runLinkedHashSet(Sets sets) {
         System.out.println("LinkedHashSet:");
-        sets.construirLinkedHashSet();
         for (String palabra : sets.construirLinkedHashSet()) {
             System.out.println(palabra);
         }
     }
 
     private static void runTreeSet(Sets sets) {
-        System.out.println("TreeSet:"); 
-        sets.construirTreeSet();
+        System.out.println("TreeSet:");
         for (String palabra : sets.construirTreeSet()) {
             System.out.println(palabra);
         }
@@ -38,7 +48,6 @@ public class App {
 
     private static void runTreeSetConComparador(Sets sets) {
         System.out.println("TreeSet con Comparador:");
-        sets.construirTreeSetConComparador();
         for (String palabra : sets.construirTreeSetConComparador()) {
             System.out.println(palabra);
         }
@@ -46,9 +55,9 @@ public class App {
 
     private static void runTreeSetConComparadorInvertido(Sets sets) {
         System.out.println("TreeSet con comparador invertido:");
-        Set<String> palabras = sets.construirTreeSetConComparadorInvertidoSet();
-        for (String palabra : palabras) {
+        for (String palabra : sets.construirTreeSetConComparadorInvertidoSet()) {
             System.out.println(palabra);
         }
     }
-}
+    */
+
